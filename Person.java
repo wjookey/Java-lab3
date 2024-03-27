@@ -20,38 +20,39 @@ public class Person {
         defineAge();
     }
 
-    public String getName() { return name; }
+    public String getName() { return name; }     // геттер для имени
 
-    public String getSurname() { return surname; }
+    public String getSurname() { return surname; }     // геттер для фамилии
 
-    public String getPatronymic() { return patronymic; }
+    public String getPatronymic() { return patronymic; }     // геттер для отчества 
 
-    public int getAge() { return age; }
+    public int getAge() { return age; }     // геттер для возраста
 
-    public String getSex() { return sex; }
+    public String getSex() { return sex; }     // геттер для пола
 
-    public int getBirthYear() { return birthYear; }
+    public int getBirthYear() { return birthYear; }     // геттер для года рождения
 
-    public int getBirthMonth() { return birthMonth; }
+    public int getBirthMonth() { return birthMonth; }     // геттер для месяца рождения
 
-    public int getBirthDay() { return birthDay; }
+    public int getBirthDay() { return birthDay; }     // геттер для дня рождения
 
-    public String getFullBirthday() { return birthday; }
-    public void setName() {
+    public String getFullBirthday() { return birthday; }     // геттер для полной даты рождения
+    
+    public void setName() {     // сеттер для имени
         System.out.print("Введите имя: ");
         this.name = sc.next();
     }
-    public void setSurname() {
+    public void setSurname() {     // сеттер для фамилии
         System.out.print("Введите фамилию: ");
         this.surname = sc.next();
     }
-    public void setPatronymic() {
+    public void setPatronymic() {     // сеттер для отчества
         System.out.print("Введите отчество: ");
         this.patronymic = sc.next();
         checkSex();
     }
 
-    public void setBirthday() {
+    public void setBirthday() {    // сеттер для даты рождения
         System.out.print("Введите дату рождения: ");
         this.birthday = sc.next();
         birthDay = 0;
@@ -107,7 +108,6 @@ public class Person {
         }
     }
     public void printInfo() {     // выводим информацию о человеке: фамилию, инициалы, пол и возраст
-        //System.out.println(result);
         System.out.println(surname + " " + name.charAt(0) + "." + patronymic.charAt(0) + ".\nПол: " + sex + "\nВозраст: " + age);
     }
 }
