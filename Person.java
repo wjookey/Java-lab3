@@ -108,6 +108,15 @@ public class Person {
         }
     }
     public void printInfo() {     // выводим информацию о человеке: фамилию, инициалы, пол и возраст
-        System.out.println(surname + " " + name.charAt(0) + "." + patronymic.charAt(0) + ".\nПол: " + sex + "\nВозраст: " + age);
+        System.out.print(surname + " " + name.charAt(0) + "." + patronymic.charAt(0) + ".\nПол: " + sex + "\nВозраст: " + age);
+        if (age % 10 == 1 && age != 11) {
+            System.out.println(" год");
+        }
+        else if (age % 10 > 1 && age % 10 < 5 && (age < 10 || age > 19)) {
+            System.out.println(" года");
+        }
+        else {
+            System.out.println(" лет");
+        }
     }
 }
